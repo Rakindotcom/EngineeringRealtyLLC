@@ -259,6 +259,10 @@ const testimonials = [
         text: "A seamless process from start to finish. Highly recommend Engineering Realty for anyone looking to buy or sell a home!",
         author: "Michael T., First-time Homebuyer"
     },
+    {
+        text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, si omnia, quae praedixi, sic afficientur, ut ille optimus et praeclarissimus vir sit, tota res non cadet. Quae si potest singula consolando levare, universa quo modo sustinebit?",
+        author: "Rakin K, Satisfied Client"
+    },
     // Add more testimonials here
 ];
 
