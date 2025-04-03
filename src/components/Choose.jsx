@@ -41,7 +41,7 @@ const WhyChooseUs = () => {
             <p className="text-center text-gray-600 mb-10">At Engineering Realty LLC, we don’t just sell properties—we build lasting relationships and craft seamless real estate experiences.</p>
             <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
                 {features.map((feature, index) => (
-                    <div key={index} className="bg-gray-200 p-6 rounded-lg shadow-xl border flex flex-col items-center text-justify-last-center">
+                    <div key={index} className="bg-gray-200 p-6 rounded-lg shadow-xl border flex flex-col items-center text-justify-last-center hover:scale-102 transition-all duration-300 cursor-default mx-2">
                         {feature.icon}
                         <h3 className="text-xl font-semibold mt-4 text-[maroon] text-center">{feature.title}</h3>
                         <p className="mt-2 text-[15px]">{feature.description}</p>

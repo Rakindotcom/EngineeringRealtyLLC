@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { Typewriter } from "react-simple-typewriter";
 import WhyChooseUs from '../components/Choose';
+import Service from '../components/Service';
 
 const Home = () => {
     return (
@@ -27,7 +28,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
+            <Service />
             <div>
                 <WhyChooseUs />
             </div>
