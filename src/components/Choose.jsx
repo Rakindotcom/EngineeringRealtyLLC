@@ -19,11 +19,6 @@ const WhyChooseUs = () => {
             description: "With hundreds of successful transactions and a long list of satisfied clients, we have a reputation for delivering results. From first-time homebuyers to seasoned investors, we’ve helped clients achieve their real estate dreams."
         },
         {
-            icon: <FaCog className="text-yellow-500 text-4xl" />,
-            title: "Technology-Driven Strategies",
-            description: "We utilize advanced data analytics, AI-powered property searches, and digital marketing techniques to connect buyers and sellers efficiently. Our high-tech approach ensures maximum exposure and faster closings."
-        },
-        {
             icon: <FaBalanceScale className="text-red-500 text-4xl" />,
             title: "Integrity, Transparency & Professionalism",
             description: "Trust is the foundation of real estate, and we operate with complete honesty and transparency. No hidden fees, no misleading information—just ethical, professional service you can rely on."

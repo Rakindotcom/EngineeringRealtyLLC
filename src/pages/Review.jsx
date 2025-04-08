@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { FaStar, FaGoogle, FaYelp, FaFacebook, FaCheckCircle, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Carousel } from "react-responsive-carousel";
+import emailjs from "emailjs-com";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Review = () => {
@@ -27,17 +28,33 @@ const Review = () => {
             return;
         }
 
-        // Submit logic here
-        console.log({ name, rating, review, photo });
+        const formData = {
+            name,
+            review,
+            rating,
+            photo: photo?.name || "No photo uploaded"
+        };
 
-        // Reset form
-        setShowSuccess(true);
-        setTimeout(() => setShowSuccess(false), 3000);
-        setReview("");
-        setRating(0);
-        setName("");
-        setPhoto(null);
-        if (fileInputRef.current) fileInputRef.current.value = "";
+        emailjs.send(
+            'service_eh87n8o',
+            'template_uuvmg36',
+            formData,
+            'bxrQDAr3TICUIRJlj'
+        ).then(
+            () => {
+                setShowSuccess(true);
+                setTimeout(() => setShowSuccess(false), 3000);
+                setReview("");
+                setRating(0);
+                setName("");
+                setPhoto(null);
+                if (fileInputRef.current) fileInputRef.current.value = "";
+            },
+            (error) => {
+                console.error("EmailJS error:", error);
+                alert("Failed to send review. Please try again later.");
+            }
+        );
     };
 
     const renderCarouselArrow = (clickHandler, isPrev) => (
@@ -53,24 +70,22 @@ const Review = () => {
 
     return (
         <div className="p-6 max-w-4xl mx-auto space-y-12">
-            {/* Success Message */}
             {showSuccess && (
-                <div className="fixed top-4 right-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded flex items-center animate-fade-in shadow-md">
+                <div className="fixed top-4 right-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded flex items-center animate-fade-in z-[9999] shadow-md">
                     <FaCheckCircle className="mr-2 flex-shrink-0" />
                     <span>Thank you for your review!</span>
                 </div>
             )}
 
-            {/* Testimonial Section */}
             <section aria-label="Client testimonials">
-                <h2 className="text-3xl font-semibold mb-6 text-center">⭐ What Our Clients Say</h2>
+                <h2 className="text-3xl font-semibold mb-6 text-center">What Our Clients Say</h2>
                 <div className="relative">
                     {renderCarouselArrow(() => carouselRef.current?.decrement(), true)}
                     {renderCarouselArrow(() => carouselRef.current?.increment(), false)}
 
                     <Carousel
                         ref={carouselRef}
-                        showArrows={false} // This hides the default arrows
+                        showArrows={false}
                         showThumbs={false}
                         autoPlay
                         infiniteLoop
@@ -95,13 +110,11 @@ const Review = () => {
                 </div>
             </section>
 
-            {/* Review Form */}
             <section aria-label="Submit your review">
                 <div className="p-6 border rounded-xl shadow-md bg-white">
                     <h3 className="text-2xl font-semibold text-center mb-6">Share Your Experience</h3>
                     <form onSubmit={handleSubmit} className="space-y-6">
 
-                        {/* Name Field */}
                         <div>
                             <label className="block text-sm font-medium mb-2 required">
                                 Your Name
@@ -120,7 +133,6 @@ const Review = () => {
                             {errors.name && <p id="name-error" className="text-red-500 text-sm mt-1">Please enter your name</p>}
                         </div>
 
-                        {/* Rating Field */}
                         <div>
                             <label className="block text-sm font-medium mb-2 required">
                                 Rating
@@ -146,7 +158,6 @@ const Review = () => {
                             {errors.rating && <p className="text-red-500 text-sm mt-1 text-center">Please select a rating</p>}
                         </div>
 
-                        {/* Review Field */}
                         <div>
                             <label className="block text-sm font-medium mb-2 required">
                                 Your Review
@@ -164,7 +175,6 @@ const Review = () => {
                             {errors.review && <p id="review-error" className="text-red-500 text-sm mt-1">Please write your review</p>}
                         </div>
 
-                        {/* Photo Upload */}
                         <div>
                             <label className="block text-sm font-medium mb-2">
                                 Upload Photo (optional)
@@ -222,7 +232,6 @@ const Review = () => {
                 </div>
             </section>
 
-            {/* Social Proof Section */}
             <section aria-label="Review platforms">
                 <div className="text-center">
                     <h3 className="text-xl font-semibold mb-4">Review Us on Your Favorite Platform</h3>
@@ -263,7 +272,6 @@ const testimonials = [
         text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, si omnia, quae praedixi, sic afficientur, ut ille optimus et praeclarissimus vir sit, tota res non cadet. Quae si potest singula consolando levare, universa quo modo sustinebit?",
         author: "Rakin K, Satisfied Client"
     },
-    // Add more testimonials here
 ];
 
 export default Review;
