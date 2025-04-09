@@ -59,8 +59,12 @@ const Contact = () => {
         <h2 className="text-2xl font-semibold text-center text-[maroon] mb-6">Send Us a Message</h2>
         <form ref={formRef} onSubmit={handleSubmit} className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
           <input type="hidden" name="subject" value={formData.subject} />
+
+          {/* Name Field */}
           <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name</label>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+              Full Name <span className="text-red-500">*</span>
+            </label>
             <input
               type="text"
               id="name"
@@ -71,8 +75,12 @@ const Contact = () => {
               required
             />
           </div>
+
+          {/* Email Field */}
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              Email Address <span className="text-red-500">*</span>
+            </label>
             <input
               type="email"
               id="email"
@@ -83,8 +91,12 @@ const Contact = () => {
               required
             />
           </div>
+
+          {/* Phone Field */}
           <div className="mb-4">
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+              Phone Number <span className="text-red-500">*</span>
+            </label>
             <input
               type="tel"
               id="phone"
@@ -95,8 +107,12 @@ const Contact = () => {
               required
             />
           </div>
+
+          {/* Message Field */}
           <div className="mb-4">
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message/Inquiry</label>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+              Message/Inquiry <span className="text-red-500">*</span>
+            </label>
             <textarea
               id="message"
               name="message"
@@ -106,8 +122,12 @@ const Contact = () => {
               required
             ></textarea>
           </div>
+
+          {/* Preferred Contact Field */}
           <div className="mb-4">
-            <label htmlFor="preferredContact" className="block text-sm font-medium text-gray-700">Preferred Method of Contact</label>
+            <label htmlFor="preferredContact" className="block text-sm font-medium text-gray-700">
+              Preferred Method of Contact
+            </label>
             <select
               id="preferredContact"
               name="preferredContact"
@@ -119,6 +139,7 @@ const Contact = () => {
               <option value="phone">Phone</option>
             </select>
           </div>
+
           <button
             type="submit"
             className="w-full py-2 px-4 bg-[maroon] text-white font-semibold rounded-md hover:bg-maroon-700"

@@ -5,6 +5,9 @@ import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Contact from './pages/Contact'
 import Review from './pages/Review'
+import About from './pages/About'
+import Listing from './pages/Listing'
+import FAQ from './pages/FAQ'
 
 const App = () => {
   return (
@@ -12,7 +15,10 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />        
-        <Route path="/contact" element={<Contact />} />        
+        <Route path="/about" element={<About />} />
+        <Route path="/listings" element={<Listing />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faqs" element={<FAQ />} />
         <Route path="/review" element={<Review />} />        
       </Routes>
       <Footer />

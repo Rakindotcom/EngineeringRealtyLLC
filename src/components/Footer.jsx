@@ -34,10 +34,10 @@ const Footer = () => {
                     <div className="space-y-4">
                         <Link to="/contact"><h3 className="text-base sm:text-lg font-semibold mb-2 hover:underline hover:text-amber-300">Contact Us</h3></Link>
                         <div className="text-[lightgray] space-y-2 text-xs sm:text-sm">
-                            <p>123 Real Estate Street</p>
-                            <p>New York, NY 10001</p>
-                            <p>Phone: (555) 123-4567</p>
-                            <p>Email: info@erlexample.com</p>
+                            <p>9321 Montgomery Rd Ste C,</p>
+                            <p>Montgomery, Ohio – 45242</p>
+                            <p>Phone: +13162007805 </p>
+                            <p>Email: kabir.bhuyan@cbrealty.com</p>
                         </div>
                     </div>
 
