@@ -18,9 +18,8 @@ const Home = () => {
                     </h2>
                     <h1 className="text-2xl font-bold text-[maroon] mb-4">Your Dream Home, Engineered to Perfection</h1>
                     <p className='text-justify-last-center'>
-                        Precision, trust, and expertise at Engineering Realty LLC, we craft real estate experiences as seamless as a blueprint. Whether you're buying, selling, or investing, we build success, one property at a time.
+                        At Engineering Realty LLC, we deliver precision, trust, and expertise to help you find your perfect home. Whether you're buying, selling, or investing, we serve clients across Greater Cincinnati — including Mason <strong>(45040)</strong>, Blue Ash <strong>(45242)</strong>, West Chester <strong>(45069)</strong>, Liberty Township, Montgomery, Springdale, Evendale, and Fairfield. Your dream home is just a few clicks away — engineered to perfection.
                     </p>
-
                     <div className="flex justify-center items-center mt-5">
                         <Link to="/listings">
                             <button className="bg-[maroon] text-white font-semibold py-2 px-7 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95">Find Your Home</button>
@@ -29,6 +28,9 @@ const Home = () => {
                 </div>
             </div>
             <Service />
+            <div className="text-center mt-4 text-sm text-gray-600">
+                Proudly serving families and investors in <strong>Mason (45040)</strong>, <strong>Blue Ash (45242)</strong>, and <strong>West Chester (45069)</strong>.
+            </div>
             <div>
                 <WhyChooseUs />
             </div>

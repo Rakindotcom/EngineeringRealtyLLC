@@ -10,9 +10,12 @@ const Footer = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
                     {/* About Section */}
                     <div className="space-y-4">
+                        <div className='flex items-center gap-4'>
+                            <img src="cbLogo.png" alt="cbLogo" className="h-20" />
                         <Link to="/" className="inline-block">
-                            <img src="erlLogo.jpg" alt="Logo" className="w-full h-30" />
+                            <img src="erlLogo.jpg" alt="Logo" className="h-20" />
                         </Link>
+                        </div>
                         <p className="text-[lightgray] text-xs sm:text-sm">
                             Leading real estate agency providing exceptional service and innovative solutions for all your property needs.
                         </p>

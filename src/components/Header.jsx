@@ -6,7 +6,8 @@ const Header = () => {
 
   return (
     <div className="bg-[#152238] text-white px-4 sm:px-10 py-5 flex justify-between items-center">
-      <div>
+      <div className='flex items-center gap-4'>
+          <img src="cbLogo.png" alt="CB Logo" className="h-10" />
         <Link to="/">
           <img src="erlLogo.jpg" alt="Logo" className="h-10" />
         </Link>
