@@ -9,13 +9,10 @@ const Footer = () => {
                 {/* Grid Layout for Footer Sections */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
                     {/* About Section */}
-                    <div className="space-y-4">
-                        <div className='flex items-center gap-4'>
-                            <img src="cbLogo.png" alt="cbLogo" className="h-20" />
+                    <div className="space-y-4">                        
                         <Link to="/" className="inline-block">
-                            <img src="erlLogo.jpg" alt="Logo" className="h-20" />
+                            <img src="erlLogo.jpg" alt="Logo" className="h-30" />
                         </Link>
-                        </div>
                         <p className="text-[lightgray] text-xs sm:text-sm">
                             Leading real estate agency providing exceptional service and innovative solutions for all your property needs.
                         </p>
@@ -36,6 +33,7 @@ const Footer = () => {
                     {/* Contact Info */}
                     <div className="space-y-4">
                         <Link to="/contact"><h3 className="text-base sm:text-lg font-semibold mb-2 hover:underline hover:text-amber-300">Contact Us</h3></Link>
+                        <img src="cbLogo.png" alt="cbLogo" className="h-30" />
                         <div className="text-[lightgray] space-y-2 text-xs sm:text-sm">
                             <p>9321 Montgomery Rd Ste C,</p>
                             <p>Montgomery, Ohio – 45242</p>
