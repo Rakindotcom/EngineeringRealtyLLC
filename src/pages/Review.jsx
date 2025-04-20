@@ -261,16 +261,16 @@ const Review = () => {
 
 const testimonials = [
     {
+        text: "Dr. Kabir went above and beyond to make my home-buying journey smooth and stress-free. I first met him in Ohio, and when I relocated to Illinois, he quickly connected me with a reliable realtor—without any hesitation. He consistently offered thoughtful advice and was always available to help. His friendly, supportive, and passionate nature truly made a difference. I couldn’t have asked for a better experience.",
+        author: "Saifuddin Mahmud"
+    },
+    {
         text: "Engineering Realty made buying our first home so easy! Their expertise and dedication were outstanding.",
-        author: "John & Sarah D., Happy Homeowners"
+        author: "John & Sarah D."
     },
     {
         text: "A seamless process from start to finish. Highly recommend Engineering Realty for anyone looking to buy or sell a home!",
-        author: "Michael T., First-time Homebuyer"
-    },
-    {
-        text: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed etiam, si omnia, quae praedixi, sic afficientur, ut ille optimus et praeclarissimus vir sit, tota res non cadet. Quae si potest singula consolando levare, universa quo modo sustinebit?",
-        author: "Rakin K, Satisfied Client"
+        author: "Michael"
     },
 ];
 
