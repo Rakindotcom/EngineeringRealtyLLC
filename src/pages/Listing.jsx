@@ -94,7 +94,14 @@ const Listing = () => {
         <div className="bg-white p-6 rounded-lg shadow-lg border-2 border-blue-950">
           {activeListings.map((property) => (
             <div key={property.id} className="border-b-2 border-gray-500 mb-6">
-              <h3 className="text-xl font-semibold text-gray-800">{property.address}</h3>
+              <a
+                href={`https://www.zillow.com/homes/${encodeURIComponent(`${property.address}, ${property.city}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-semibold text-blue-700 hover:underline"
+              >
+                {property.address}
+              </a>
               <p className="text-gray-600">{property.city}</p>
               <p className="text-lg font-bold text-teal-800">{property.price}</p>
               <p className="text-sm text-gray-500">{property.status}</p>
@@ -109,10 +116,19 @@ const Listing = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {soldListings.map((property) => (
             <div key={property.id} className="bg-white p-6 rounded-lg shadow-lg border-2 border-gray-600 mb-6">
-              <h3 className="text-xl font-semibold text-gray-800">{property.address}</h3>
+              <a
+                href={`https://www.zillow.com/homes/${encodeURIComponent(`${property.address}, ${property.city}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-semibold text-blue-700 hover:underline"
+              >
+                {property.address}
+              </a>
               <p className="text-gray-600">{property.city}</p>
               <p className="text-lg font-bold text-teal-800">{property.price}</p>
-              <p className="text-sm text-gray-500">MLS#: {property.mls}</p>
+              {property.mls && property.mls !== 'N/A' && (
+                <p className="text-sm text-gray-500">MLS#: {property.mls}</p>
+              )}
               {property.saleSide && <p className="text-sm text-gray-500">Sale Side: {property.saleSide}</p>}
               {property.fileRef && <p className="text-sm text-gray-500">File Reference #: {property.fileRef}</p>}
             </div>
